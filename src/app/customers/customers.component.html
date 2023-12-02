@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="table">
+    <thead>
+      <tr>
+        <th>Id</th><th>Name</th><th>Email</th><th>Orders</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of this.customers">
+        <td>{{c.id}}</td>
+        <td>{{c.name}}</td>
+        <td>{{c.email}}</td>
+        <td>
+          <button class="btn btn-success" (click)="getOrders(c)">Show Orders</button>
+        </td>
+      </tr>
+    </tbody>
+  </div>
+</div>

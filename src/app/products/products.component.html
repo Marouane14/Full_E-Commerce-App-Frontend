@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="table">
+    <thead>
+      <tr>
+        <th>Id</th><th>Name</th><th>Price</th><th>Quantity</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of this.products">
+        <td>{{product.id}}</td>
+        <td class="text-center">{{product.name}}</td>
+        <td class="text-end">{{product.price | number : '.2'}}</td>
+        <td class="text-end">{{product.quantity}}</td>
+      </tr>
+    </tbody>
+  </div>
+</div>

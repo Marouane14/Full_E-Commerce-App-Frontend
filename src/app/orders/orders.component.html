@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="table">
+    <thead>
+      <tr>
+        <th class="text-center">Id</th><th class="text-center">Date</th><th class="text-center">Status</th><th class="text-center">CustomerId</th><th class="text-center">Order Details</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let o of this.orders">
+        <td class="text-center">{{o.id}}</td>
+        <td class="text-center">{{o.createdAt | date:'dd/MM/yyyy'}}</td>
+        <td class="text-center">{{o.status}}</td>
+        <td class="text-center">{{o.customerId}}</td>
+        <td>
+          <button class="btn btn-success" (click)="getOrdersDetails(o)">Order Details</button>
+        </td>
+      </tr>
+    </tbody>
+  </div>
+</div>
